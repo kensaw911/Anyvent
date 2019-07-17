@@ -1,0 +1,71 @@
+
+<ion-content class="background">  
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+
+        <ion-card text-center>
+
+          <ion-card-header> 
+              Anyvent
+          </ion-card-header>
+
+          <ion-grid>
+
+            <ion-row>
+              <ion-col col-12>
+                <ion-item class="email">
+                  <ion-icon name="mail" item-start></ion-icon>
+                  <ion-input type="email" placeholder="Email" [(ngModel)]="userInfo.email"></ion-input>
+                  [(ngModel)]="user.email"
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col col-12>
+                <ion-item class="password">
+                  <ion-icon name="lock" item-start></ion-icon>
+                  <ion-input type=password [type]="passwordType" placeholder="Password" [(ngModel)]="userInfo.password"></ion-input>
+                  [(ngModel)]="user.password"
+                  <ion-icon name="eye" (touchstart)="showPassword($event)" (touchend)="hidePassword($event)" item-right></ion-icon>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            
+            <ion-row>
+              <ion-col>
+                <a float-left class="forgotPassword" (click)="resetPassword()">Forgot your password? Click here</a>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+                <button class="register" (click)="register()">Not a member? SIGN UP NOW</button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+                <button class="login" (click)="validateLogin()">Login</button>
+              </ion-col>
+            </ion-row>
+
+            <p><b>OR</b></p>
+
+            <ion-row>
+              <ion-col>
+                <button class="fbLogin" (click)="loginWithFacebook()">
+                  <ion-icon name="logo-facebook" item-start></ion-icon>
+                  <span>Login with Facebook</span>
+                </button>
+              </ion-col>
+            </ion-row>
+            
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

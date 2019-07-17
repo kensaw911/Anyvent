@@ -1,0 +1,93 @@
+<ion-content class="background"> 
+  <ion-grid>
+    <ion-row class="header">
+      <ion-col>
+        <h2>MEMBER REGISTRATION</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-item class="fname">
+          <ion-input type="text" placeholder="First Name" [(ngModel)]="userInfo.fname"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p float-left [hidden]='offFnameBlankText' class="err">*Please enter First Name</p>
+        <p float-left [hidden]='offFnameInvalidText' class="err">*Name should contain only characters</p>
+      </ion-col>   
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-item class="lname">
+          <ion-input type="text" placeholder="Last Name" [(ngModel)]="userInfo.lname"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p float-left [hidden]='offLnameBlankText' class="err">*Please enter Last Name</p>
+        <p float-left [hidden]='offLnameInvalidText' class="err">*Name should contain only characters</p>
+      </ion-col>   
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-item class="email">
+          <ion-input type="email" placeholder="Email" [(ngModel)]="userInfo.email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p float-left [hidden]='offEmailBlankText' class="err">*I bet you do have an email right?</p>
+        <p float-left [hidden]='offEmailInvalidText' class="err">*Invalid email format</p>
+      </ion-col>   
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-item class="password">
+          <ion-input [type]="passwordType" placeholder="Password" [(ngModel)]="userInfo.password"></ion-input>
+          <ion-icon name="eye" (touchstart)="showPassword($event)" (touchend)="hidePassword($event)" item-right></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p float-left [hidden]='offPassInvalidText' class="err">*Password must be at least 8 alphanumeric characters</p>
+      </ion-col>   
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-item class="cpassword">
+          <ion-input type="password" placeholder="Confirm Password" [(ngModel)]="userInfo.cpassword"></ion-input>
+          <ion-icon [hidden]='offPassMismatchLogo' class="passmismatch" name="close-circle-outline" color="danger" item-right></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p float-left [hidden]='offPassMismatchText' class="err">*Password mismatch</p>
+      </ion-col>   
+    </ion-row>
+    
+    <ion-row class="button">
+      <ion-col col-6>
+        <button ion-button block fill class="backButton" (click)="backToLogin()">Back</button>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button block fill class="register" (click)="registerValidation()">Register</button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

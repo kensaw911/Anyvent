@@ -1,0 +1,93 @@
+page-login {  
+    ion-card.card {
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    ion-card-header.card-header {
+        color: #fff !important;
+        font-size: 1em;
+    }
+    
+    ion-item {
+        border-top-right-radius:30px !important;
+        border-bottom-right-radius:30px !important;
+        border-bottom-left-radius:40px !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        width: 100%;
+    
+        ion-icon {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 18px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            z-index: 9000;
+        }
+    }
+    
+    b {
+        color: whitesmoke;
+    }
+
+
+    .background {
+        background-image: url('../../assets/imgs/login.jpg');
+        background-size: cover;                      
+        background-repeat: no-repeat;
+    }
+
+    .forgotPassword {
+        text-align: left;
+        margin-top: 2% !important;
+        background-color: rgba(0, 0, 0, 0.0);
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .email {
+        margin-bottom: 5%;
+    }
+    
+    .register {
+        margin-top: 15%;
+        background-color: rgba(0, 0, 0, 0.0);
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .login {
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 90%;
+        padding: 4%;
+        border-radius: 20px;
+        font-weight: bold;
+        margin-bottom: 2%;
+    }
+    
+    .fbLogin {
+        color: whitesmoke;
+        background-color: rgba(59,89,152,0.9);
+        width: 90%;
+        padding: 4%;
+        border-radius: 20px;
+        margin-bottom: 5%;
+        margin-top: 2%;
+        font-weight: bold;
+    
+        ion-icon {
+            padding-right: 1rem;
+        }
+
+    }
+
+    .scroll-content {
+        padding-bottom: 0%!important;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,8 @@
+{
+  "name": "anyvent-for-user",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
