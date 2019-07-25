@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import { FavouritePage } from '../favourite/favourite';
+import { FreelancePage } from '../freelance/freelance';
 
 /**
  * Generated class for the TabsPage page.
@@ -21,8 +23,8 @@ export class TabsPage {
   loaded: boolean = false;
   tabIndex: number  = 0;
   home = HomePage;
-  favourite = HomePage;
-  job = HomePage;
+  favourite = FavouritePage;
+  freelance = FreelancePage;
 
   constructor(
     public navCtrl: NavController, 
@@ -35,7 +37,7 @@ export class TabsPage {
     this.email = this.navParams.get('email');
   }
 
-  private transition(e):void {
+  public transition(e):void {
     let options: NativeTransitionOptions = {
      direction:this.getAnimationDirection(e.index),
      duration: 200,
@@ -68,5 +70,4 @@ export class TabsPage {
         return ('right');
     }
   }
-
 }

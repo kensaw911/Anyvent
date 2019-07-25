@@ -9,21 +9,29 @@ import { LoginPage } from '../pages/login/login';
 import { GeneralproviderProvider } from '../providers/generalprovider/generalprovider';
 import { RegisterPage } from '../pages/register/register';
 import { firebaseConfig } from './app.firebase.config';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2'
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { Network } from '@ionic-native/network';
 import { Facebook } from '@ionic-native/facebook';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+import { ShrinkingSegmentHeaderComponent } from '../components/shrinking-segment-header/shrinking-segment-header';
+import { EventServiceProvider } from '../providers/event-service/event-service';
+import { FavouritePage } from '../pages/favourite/favourite';
+import { FreelancePage } from '../pages/freelance/freelance';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    FavouritePage,
+    FreelancePage,
     LoginPage,
     RegisterPage,
-    TabsPage
+    TabsPage,
+    ShrinkingSegmentHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,9 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     HomePage,
     LoginPage,
     RegisterPage,
-    TabsPage
+    TabsPage,
+    FavouritePage,
+    FreelancePage
   ],
   providers: [
     StatusBar,
@@ -47,7 +57,8 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions';
     AngularFireAuth,
     Network,
     Facebook,
-    NativePageTransitions
+    NativePageTransitions,
+    EventServiceProvider
   ]
 })
 export class AppModule {}

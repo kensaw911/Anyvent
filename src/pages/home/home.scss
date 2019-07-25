@@ -1,3 +1,58 @@
 page-home {
+   
+    ion-navbar.toolbar {
+        min-height: 60px;
+    }
 
+    ion-header {
+        position:absolute !important;
+
+        .toolbar-background {
+            background: rgba(34,34,34,0.3);
+        }
+
+        .toolbar-title {
+            color: whitesmoke !important;
+        }
+
+        button {
+            color: whitesmoke !important;
+        }
+
+        ion-searchbar {
+            color: whitesmoke !important;
+        }
+    }
+
+    .extraHeader {
+        background-size: cover !important;
+        top: 0;
+        color: #fff;
+        position: absolute;
+        width: 100%; /* Full width */
+        z-index: -1 !important;
+
+        .extraHeaderContent {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding-bottom: 40px;
+            padding-right: 15px;
+            
+            font-size: 20px;
+            color: rgba(245, 245, 245, 0.9);
+        }
+    }
+
+    .list {
+        margin-top: 90px;
+    }
+
+    .notification {
+        color: rgb(34,34,34);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
