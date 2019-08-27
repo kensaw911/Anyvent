@@ -24,11 +24,100 @@ page-home {
         }
     }
 
+    ion-card {
+        margin-bottom: 30px !important;
+        min-height: 250px !important;
+
+        ion-item {
+            padding: 0 !important;
+        }
+
+        ion-label {
+            margin: 0 !important;
+        }
+
+        .eventImg {
+            width: 100% !important;
+            height: 250px !important;
+        }
+
+        .buttons {
+            background: rgba(34,34,34,0.8);
+            width: 90px;
+            position: absolute;
+            right: 0;
+            bottom: 80px;
+            border-top-left-radius: 20px;
+
+            ion-icon {
+                margin-left: 10px;
+                margin-right: 10px;
+                float: right;
+                font-size: 1.3em;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .eventDesc {
+            background: rgba(34,34,34,0.8);
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            position: absolute;
+        }
+
+        .eventTitle {
+            font-size: 1.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+            float: left;
+            max-height: 44px !important;
+            overflow: hidden;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            white-space: pre-wrap;      /* CSS3 */   
+            white-space: -moz-pre-wrap; /* Firefox */    
+            white-space: -pre-wrap;     /* Opera <7 */   
+            white-space: -o-pre-wrap;   /* Opera 7 */
+            word-wrap: break-word;
+        }
+    
+        .eventDateTime {
+            font-size: 0.8em;
+            width: 100%;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            color: #b2eff6;
+            float: left;
+        }
+
+        .eventCompany {
+            font-size: 0.8em;
+            width: 100%;
+            padding-left: 5px;
+            padding-bottom: 2px;
+            color: #9daaca;
+            float: left;
+        }
+
+        .item-inner {
+            padding: 0 !important;
+        }
+
+
+    }
+
     .extraHeader {
         background-size: cover !important;
         top: 0;
         color: #fff;
-        position: absolute;
+        position: absolute !important;
         width: 100%; /* Full width */
         z-index: -1 !important;
 
@@ -46,7 +135,7 @@ page-home {
     }
 
     .list {
-        margin-top: 90px;
+        margin-top: 100px;
     }
 
     .notification {
@@ -54,5 +143,13 @@ page-home {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .iconred {
+        color: red !important;
+    }
+
+    .iconwhite {
+        color: white !important;
     }
 }

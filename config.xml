@@ -111,4 +111,9 @@
         <variable name="WEB_APPLICATION_CLIENT_ID" value="593240895957-28afjrn4qqqoj1nvpd81cqjpvni6nbt4.apps.googleusercontent.com" />
     </plugin>
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
+    <plugin name="cordova-plugin-calendar" spec="^5.1.4" />
+    <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="^5.0.4">
+        <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="AIzaSyCdqOXjpFGrD14g0RKnvMuSjtB_kAd2TXM" />
+        <variable name="OKHTTP_VERSION" value="3.12.0" />
+    </plugin>
 </widget>

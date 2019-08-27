@@ -1,4 +1,4 @@
-import { AlertController, LoadingController } from 'ionic-angular';
+import { AlertController, LoadingController, ToastController } from 'ionic-angular';
 import { Injectable } from '@angular/core';
 import { Network } from '@ionic-native/network';
 
@@ -14,7 +14,8 @@ export class GeneralproviderProvider {
   constructor(
     private alertCtrl: AlertController,
     private loadingCtrl: LoadingController,
-    private network: Network
+    private network: Network,
+    private toast: ToastController
     ) {
   }
 
@@ -91,5 +92,13 @@ export class GeneralproviderProvider {
      else {
        return true;
      }
+   }
+
+   //Display toast message
+   public showToast(description: string) {
+     this.toast.create({
+       message: description,
+       duration: 3000
+     }).present();
    }
 }

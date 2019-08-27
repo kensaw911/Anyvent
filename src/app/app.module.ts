@@ -20,6 +20,9 @@ import { ShrinkingSegmentHeaderComponent } from '../components/shrinking-segment
 import { EventServiceProvider } from '../providers/event-service/event-service';
 import { FavouritePage } from '../pages/favourite/favourite';
 import { FreelancePage } from '../pages/freelance/freelance';
+import { EventInfoPage } from '../pages/event-info/event-info';
+import { Calendar } from '@ionic-native/calendar';
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
 
 
 @NgModule({
@@ -31,6 +34,7 @@ import { FreelancePage } from '../pages/freelance/freelance';
     LoginPage,
     RegisterPage,
     TabsPage,
+    EventInfoPage,
     ShrinkingSegmentHeaderComponent
   ],
   imports: [
@@ -47,7 +51,8 @@ import { FreelancePage } from '../pages/freelance/freelance';
     RegisterPage,
     TabsPage,
     FavouritePage,
-    FreelancePage
+    FreelancePage,
+    EventInfoPage
   ],
   providers: [
     StatusBar,
@@ -58,7 +63,9 @@ import { FreelancePage } from '../pages/freelance/freelance';
     Network,
     Facebook,
     NativePageTransitions,
-    EventServiceProvider
+    EventServiceProvider,
+    Calendar,
+    LaunchNavigator
   ]
 })
 export class AppModule {}

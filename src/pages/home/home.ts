@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { EventServiceProvider } from '../../providers/event-service/event-service';
 import { take } from 'rxjs/operators';
 import {Content} from 'ionic-angular';
+import { EventInfoPage } from '../event-info/event-info';
 
 @Component({
   selector: 'page-home',
@@ -31,7 +32,7 @@ export class HomePage {
     ) {}
 
   ionViewDidLoad() {
-    this.events$ = this.eventService.events$;
+    this.getEvents();
     // this.content.ionScroll.subscribe((ev) => {
     //   this.resizeHeader(ev);
     // })
@@ -91,8 +92,16 @@ export class HomePage {
   // }
 
   doRefresh(refresher) {
-    this.events$ = this.eventService.events$;
+    this.getEvents();
 
     refresher.complete();
+  }
+
+  getEvents() {
+    this.events$ = this.eventService.events$;
+  }
+
+  displayEventInfo(eventKey: string) {
+    this.navCtrl.push(EventInfoPage,{eventKey:eventKey});
   }
 }

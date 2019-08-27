@@ -19,7 +19,7 @@
   </div>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content fullscreen #myContent>
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="arrow-dropdown"
     pullingText="Pull to refresh"
@@ -27,11 +27,22 @@
     refreshingText="Refreshing..."></ion-refresher-content>
   </ion-refresher>
 
-  <ion-list class="list">
-    <ion-item *ngFor="let event of events$ | async">
-      {{ event.title }} | {{ event.date }}
-    </ion-item>
-  </ion-list>
+  <div class="list">
+    <ion-card *ngFor="let event of events$ | async" (click)="displayEventInfo(event.key)">
+      <ion-item [id]=event.key>
+        <img class="eventImg" src="../../assets/imgs/event.jpg">
+        <div class="buttons">
+          <ion-icon name="heart" [id]="event.key + '.fav'"></ion-icon>
+          <ion-icon name="share"></ion-icon>
+        </div>
+        <div class="eventDesc">
+          <div class="eventDateTime">{{ event.date }} @ {{ event.time }}</div>
+          <div class="eventTitle">{{ event.eventName }}</div>   
+          <div class="eventCompany">By Company Name</div>
+        </div>     
+      </ion-item>
+    </ion-card>
+  </div>
 
   <ion-infinite-scroll [hidden]="isEventFinished"
     (ionInfinite)="$event.waitFor(doInfinite())">

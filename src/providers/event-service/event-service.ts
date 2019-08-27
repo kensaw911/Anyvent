@@ -15,7 +15,7 @@ import { tap, take } from 'rxjs/operators';
 export class EventServiceProvider {
 
   public _events$ = new BehaviorSubject<any[]>([]);
-  batch = 15;
+  batch = 10;
   lastKey = '';
   finished = false;
 

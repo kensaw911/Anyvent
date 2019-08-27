@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title>
+        Event Info
+      </ion-title>
+  </ion-navbar>
+
+  <shrinking-segment-header [scrollArea]="myContent" headerHeight="200">
+      <img src="https://avatars.io/instagram/pathmoretravelled" />
+      <h2>Josh</h2>
+  </shrinking-segment-header>
+
+  <!-- <ion-toolbar color="light" mode="md">
+    <ion-segment color="dark" mode="md" [(ngModel)]="section">
+      <ion-segment-button value="one">
+        <ion-icon name="home"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="two">
+        <ion-icon name="cog"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="three">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar> -->
+
+</ion-header>
+
+<ion-content fullscreen #myContent>
+  <h1 id="eventTitle">{{eventDetails.eventName}}</h1>
+  <h5 id="eventCompany">By [Company Name]</h5>
+  <table class="eventInfoTable">
+    <tr>
+      <td>
+        <h4 class="title">Description</h4>
+        <ion-icon name="paper" class="icons"></ion-icon>
+      </td>
+    </tr>
+    <tr>
+      <td class="padding">
+        <div text-justify id="eventDesc">
+          {{eventDetails.eventDesc}}
+        </div>
+        <div (click)="readMoreDesc()" id="readButton" class="readMore">Read More</div>
+      </td>    
+    </tr>
+
+    <br/>
+
+    <tr>
+      <td>
+        <h4 class="title">Date</h4>
+        <ion-icon name="calendar" class="icons"></ion-icon>
+      </td>
+    </tr>
+    <tr>
+      <td class="padding">
+        <div class="date">{{showDate}}</div>
+        <!-- <br/> -->
+        <div class="time">{{eventDetails.time}}</div>
+        <!-- <br/> -->
+        <div class="addToCalendar" (click)="addToCalendar()">Add to your calendar</div>
+      </td>
+    </tr>
+
+    <br/>
+
+    <tr>
+      <td>
+        <h4 class="title">Location</h4>
+        <ion-icon name="pin" class="icons"></ion-icon>
+      </td>
+    </tr>
+    <tr>
+      <td class="padding">
+        {{eventDetails.location}}
+        <br/>
+        <div class="addToCalendar" (click)="navigate()">Navigate!</div>
+      </td>
+    </tr>
+
+    <br/>
+
+    <tr>
+      <td>
+        <h4 class="title">Contact</h4>
+        <ion-icon name="call" class="icons"></ion-icon>
+      </td>
+    </tr>
+    <tr>
+      <td class="padding">
+        {{eventDetails.phone}}
+      </td>
+    </tr>
+
+    <br/>
+
+    <tr>
+      <td>
+        <h4 class="title">Email</h4>
+        <ion-icon name="mail" class="icons"></ion-icon>
+      </td>
+    </tr>
+    <tr>
+      <td class="padding">
+        {{eventDetails.email}}
+      </td>
+    </tr>
+  
+    <br/>
+
+    <tr>
+      <td>
+        <h4 class="title">Tags</h4>
+        <ion-icon name="pricetags" class="icons"></ion-icon>
+      </td>
+    </tr>
+    <tr>
+      <td class="padding">
+        {{eventDetails.eventType}}
+        <br/>
+      </td>
+    </tr>
+  </table>
+</ion-content>
