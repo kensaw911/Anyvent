@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { Calendar } from '@ionic-native/calendar';
 import { GeneralproviderProvider } from '../../providers/generalprovider/generalprovider';
 import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 /**
  * Generated class for the EventInfoPage page.
@@ -35,7 +36,8 @@ export class EventInfoPage {
     private afDatabase: AngularFireDatabase,
     private generalProvider: GeneralproviderProvider,
     private calendar: Calendar,
-    private launchNav: LaunchNavigator) {
+    private launchNav: LaunchNavigator,
+    private emailComposer: EmailComposer) {
     this.eventKey = navParams.get('eventKey');
   }
 
@@ -107,6 +109,18 @@ export class EventInfoPage {
           }
         }
       }
+
+      if(this.eventDetails.eventType) {
+        let splitType = this.eventDetails.eventType.split(",");
+
+        for(var j=0;j<splitType.length;j++) 
+        {
+          splitType[j] = splitType[j].trim();
+          splitType[j] = "#" + splitType[j];
+        }
+
+        this.eventDetails.eventType = splitType.join("  ");
+      }
      
       console.log(this.eventDetails);
       this.eventInfo.unsubscribe();
@@ -151,5 +165,19 @@ export class EventInfoPage {
       success => this.generalProvider.alertMessage("Navigate successfully"),
       error => this.generalProvider.alertMessage("Navigate error: " + error)
     );
+  }
+
+  sendEmail() {
+    let email = {
+      to: this.eventDetails.email,
+      subject: 'Enquiries for: ' + this.eventDetails.eventName,
+      isHtml: true
+    };
+
+    this.emailComposer.isAvailable().then((available: boolean) => {
+      if(available) {
+        this.emailComposer.open(email);
+      }
+    })
   }
 }

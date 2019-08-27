@@ -23,6 +23,7 @@ import { FreelancePage } from '../pages/freelance/freelance';
 import { EventInfoPage } from '../pages/event-info/event-info';
 import { Calendar } from '@ionic-native/calendar';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     NativePageTransitions,
     EventServiceProvider,
     Calendar,
-    LaunchNavigator
+    LaunchNavigator,
+    EmailComposer
   ]
 })
 export class AppModule {}

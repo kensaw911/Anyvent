@@ -62,7 +62,6 @@ page-event-info {
     .readMore {
         padding-top: 10px;
         font-weight: bold;
-        font-size: 0.8em;
         color: darkblue;
     }
 
@@ -70,16 +69,28 @@ page-event-info {
         font-family: 'Roboto', Times, serif;
     }
 
-    .time {
+    .time, .emailDesc {
         font-family: 'Roboto', Times, serif;
-        font-size: 0.8em;
         color: gray;
     }
 
     .addToCalendar {
         padding-top: 10px;
         font-weight: bold;
-        font-size: 0.8em;
         color: darkblue;
+    }
+
+    .email {
+        font-weight: bold;
+        color: darkblue;
+        text-decoration: underline;
+    }
+
+    .tags {
+        font-weight: bold;
+    }
+
+    .font-point8 {
+        font-size: 0.8em !important;
     }
 }

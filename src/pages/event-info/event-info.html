@@ -38,10 +38,10 @@
     </tr>
     <tr>
       <td class="padding">
-        <div text-justify id="eventDesc">
+        <div text-justify id="eventDesc" class="font-point8">
           {{eventDetails.eventDesc}}
         </div>
-        <div (click)="readMoreDesc()" id="readButton" class="readMore">Read More</div>
+        <div (click)="readMoreDesc()" id="readButton" class="readMore font-point8">Read More</div>
       </td>    
     </tr>
 
@@ -55,11 +55,9 @@
     </tr>
     <tr>
       <td class="padding">
-        <div class="date">{{showDate}}</div>
-        <!-- <br/> -->
-        <div class="time">{{eventDetails.time}}</div>
-        <!-- <br/> -->
-        <div class="addToCalendar" (click)="addToCalendar()">Add to your calendar</div>
+        <div class="date font-point8">{{showDate}}</div>
+        <div class="time font-point8">{{eventDetails.time}}</div>
+        <div class="addToCalendar font-point8" (click)="addToCalendar()">Add to your calendar</div>
       </td>
     </tr>
 
@@ -72,7 +70,7 @@
       </td>
     </tr>
     <tr>
-      <td class="padding">
+      <td class="padding font-point8">
         {{eventDetails.location}}
         <br/>
         <div class="addToCalendar" (click)="navigate()">Navigate!</div>
@@ -81,7 +79,7 @@
 
     <br/>
 
-    <tr>
+    <!-- <tr>
       <td>
         <h4 class="title">Contact</h4>
         <ion-icon name="call" class="icons"></ion-icon>
@@ -93,7 +91,7 @@
       </td>
     </tr>
 
-    <br/>
+    <br/> -->
 
     <tr>
       <td>
@@ -103,7 +101,8 @@
     </tr>
     <tr>
       <td class="padding">
-        {{eventDetails.email}}
+        <div class="emailDesc font-point8">For more enquiries, email to:</div>
+        <div class="email font-point8" (click)="sendEmail()">{{eventDetails.email}}</div>   
       </td>
     </tr>
   
@@ -116,7 +115,7 @@
       </td>
     </tr>
     <tr>
-      <td class="padding">
+      <td class="padding tags font-point8">
         {{eventDetails.eventType}}
         <br/>
       </td>
