@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { FavouritePage } from '../favourite/favourite';
 import { FreelancePage } from '../freelance/freelance';
+import { UserinfoProvider } from '../../providers/userinfo/userinfo';
 
 /**
  * Generated class for the TabsPage page.
@@ -18,7 +19,7 @@ import { FreelancePage } from '../freelance/freelance';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
-  public email;
+  
 
   loaded: boolean = false;
   tabIndex: number  = 0;
@@ -29,12 +30,17 @@ export class TabsPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public nativePageTransitions: NativePageTransitions) {
+    public nativePageTransitions: NativePageTransitions,
+    public userInfo: UserinfoProvider) {
   }
 
   ionViewDidLoad() {
+    let email: string;
+
     console.log('ionViewDidLoad TabsPage');
-    this.email = this.navParams.get('email');
+
+    email = localStorage.getItem('authUser');
+    this.userInfo.getUserDetails(email);
   }
 
   public transition(e):void {

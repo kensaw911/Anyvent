@@ -6,6 +6,8 @@ import { userinfo } from '../../models/userinfo';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { TabsPage } from '../tabs/tabs';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { UserinfoProvider } from '../../providers/userinfo/userinfo';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the LoginPage page.
@@ -22,7 +24,7 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 export class LoginPage {
 
   passwordType: string = 'password';
-  userInfo = {} as userinfo;
+  userInfo = {} as any;
   loading: any;
 
   constructor(
@@ -31,7 +33,9 @@ export class LoginPage {
     private alertCtrl: AlertController,
     private generalProvider: GeneralproviderProvider,
     private loginAuth: AngularFireAuth,
-    private fb: Facebook
+    private fb: Facebook,
+    private userInfoProvider: UserinfoProvider,
+    private angularfireDB: AngularFireDatabase
     ) 
   {
 
@@ -50,9 +54,7 @@ export class LoginPage {
       
       // this.generalProvider.alertMessage(message);  
 
-      this.navCtrl.push(TabsPage, {
-        email: authUser
-      });
+      this.navCtrl.push(TabsPage);
       // this.navCtrl.swipeBackEnabled = true;
     }
     else {
@@ -279,10 +281,20 @@ export class LoginPage {
     .then((response) => {
       this.userInfo.fname = response.first_name;
       this.userInfo.lname = response.last_name;
-      this.userInfo.email = response.email;
       email = response.email;
     })
     .then(() => {
+      //profile registration
+      this.userInfoProvider.getUserDetails(email);
+
+      if(!localStorage.getItem('fname')) {
+        this.userInfo.rewardPoints = 0;
+        this.userInfo.favourites = '';
+        //profile registration
+        let filteredEmail = email.replace('.', 'dot');
+        this.angularfireDB.object('profile/' + filteredEmail).set(this.userInfo);
+      }
+
       localStorage.setItem('authUser', email);
     });
   }

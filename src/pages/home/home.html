@@ -12,22 +12,27 @@
       </ion-buttons>
   </ion-navbar>
 
-  <div class="extraHeader" [style.height]="headerHeight + 'px'" [style.background]="'url(' + backgroundImg + ')'">
-    <div class="extraHeaderContent" float-right>
-      Good {{day}}, {{lastName}}
+  <div class="extraHeader header-size-transition" [style.transition-duration]="'.' + transDuration + 's'" [style.max-height]="headerHeight + 'px'">
+    <div class="extraHeader" [style.background]="'url(' + backgroundImg + ')'">
+      <div class="extraHeaderContent" float-right>
+        Good {{day}}, {{lastName}}
+      </div>
     </div>
   </div>
 </ion-header>
 
-<ion-content fullscreen #myContent>
-  <ion-refresher (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content pullingIcon="arrow-dropdown"
-    pullingText="Pull to refresh"
-    refreshingSpinner="circles"
-    refreshingText="Refreshing..."></ion-refresher-content>
-  </ion-refresher>
+<ion-content fullscreen #myContent (ionScroll)="scroll($event)">
+  <div class="imghidden">
+    <img class="imghidden" [src]="hiddenImg"/>
+  </div>
+  <div>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."></ion-refresher-content>
+    </ion-refresher>
 
-  <div class="list">
     <ion-card *ngFor="let event of events$ | async" (click)="displayEventInfo(event.key)">
       <ion-item [id]=event.key>
         <img class="eventImg" src="../../assets/imgs/event.jpg">

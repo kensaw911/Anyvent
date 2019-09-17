@@ -18,8 +18,10 @@ export class HomePage {
   //For Header
   headerHeight = 150;
   backgroundImg = '';
+  hiddenImg = '';
+  transDuration = 2;
   day = 'Evening';
-  lastName = 'Wei Zhen';
+  lastName = localStorage.getItem('fname');
 
   public showSearchBar = false;
   public showTitle = true;
@@ -45,12 +47,15 @@ export class HomePage {
 
     if(hour < 12) {
       this.backgroundImg = '../../assets/imgs/sunrise.jpg';
+      this.hiddenImg = '../../assets/imgs/snoopy-hi.gif';
     }
     else if(hour > 12 && hour < 20) {
       this.backgroundImg = '../../assets/imgs/sunset.jpg';
+      this.hiddenImg = '../../assets/imgs/snoopy.gif';
     }
     else {
       this.backgroundImg = '../../assets/imgs/nightsky.jpg';
+      this.hiddenImg = '../../assets/imgs/snoopy-goodnight.gif';
     }
   }
 
@@ -87,9 +92,16 @@ export class HomePage {
     return Promise.resolve();
   }
 
-  // scroll(event) {
-  //   console.log(event);
-  // }
+  scroll(event) {
+    if(event.scrollTop > 100) {
+      this.headerHeight = 60;
+      this.transDuration = 2;
+    }
+    else if(event.scrollTop < 10) {
+      this.headerHeight = 150;
+      this.transDuration = 8;
+    }
+  }
 
   doRefresh(refresher) {
     this.getEvents();

@@ -24,6 +24,7 @@ import { EventInfoPage } from '../pages/event-info/event-info';
 import { Calendar } from '@ionic-native/calendar';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { UserinfoProvider } from '../providers/userinfo/userinfo';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { EmailComposer } from '@ionic-native/email-composer';
     EventServiceProvider,
     Calendar,
     LaunchNavigator,
-    EmailComposer
+    EmailComposer,
+    UserinfoProvider
   ]
 })
 export class AppModule {}

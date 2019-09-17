@@ -189,6 +189,7 @@ export class RegisterPage {
       registeredUserInfo['fname'] = this.userInfo.fname;
       registeredUserInfo['lname'] = this.userInfo.lname;
       registeredUserInfo['rewardPoints'] = 0;
+      registeredUserInfo['favourites'] = '';
 
       //profile registration
       let filteredEmail = email.replace('.', 'dot');
@@ -220,6 +221,15 @@ export class RegisterPage {
       this.userInfo.rewardPoints = undefined;
 
       this.backToLogin();
+    })
+    .catch((exception) => {
+      var message = {
+        title: "Register Failed",
+        subtitle: exception
+      };
+      
+      this.generalProvider.alertMessage(message);
+      this.loading.dismiss();
     });
   }
 }

@@ -120,6 +120,10 @@ page-home {
         position: absolute !important;
         width: 100%; /* Full width */
         z-index: -1 !important;
+        // transition-duration: .8s;
+        transition-delay: 0ms;
+        height: 150px !important;
+        overflow-y: hidden !important;
 
         .extraHeaderContent {
             font-family: Georgia, 'Times New Roman', Times, serif;
@@ -135,7 +139,7 @@ page-home {
     }
 
     .list {
-        margin-top: 100px;
+        // margin-top: 100px;
     }
 
     .notification {
@@ -143,6 +147,7 @@ page-home {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 80px;
     }
 
     .iconred {
@@ -151,5 +156,10 @@ page-home {
 
     .iconwhite {
         color: white !important;
+    }
+
+    .imghidden {
+        height: 95px !important;
+        text-align: center !important;
     }
 }
