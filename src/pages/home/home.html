@@ -33,14 +33,14 @@
       refreshingText="Refreshing..."></ion-refresher-content>
     </ion-refresher>
 
-    <ion-card *ngFor="let event of events$ | async" (click)="displayEventInfo(event.key)">
+    <ion-card *ngFor="let event of events$ | async">
       <ion-item [id]=event.key>
-        <img class="eventImg" src="../../assets/imgs/event.jpg">
+        <img class="eventImg" src="../../assets/imgs/event.jpg" (click)="displayEventInfo(event.key)">
         <div class="buttons">
-          <ion-icon name="heart" [id]="event.key + '.fav'"></ion-icon>
-          <ion-icon name="share"></ion-icon>
+          <ion-icon name="heart" [id]="event.key + '_fav'" (click)="addToFav($event)" [ngClass]="favArr.includes(event.key)?'iconred':'iconwhite'"></ion-icon>
+          <ion-icon name="share" [id]="event.key + '_share'" (click)="shareEvent($event)"></ion-icon>
         </div>
-        <div class="eventDesc">
+        <div class="eventDesc" (click)="displayEventInfo(event.key)">
           <div class="eventDateTime">{{ event.date }} @ {{ event.time }}</div>
           <div class="eventTitle">{{ event.eventName }}</div>   
           <div class="eventCompany">By Company Name</div>

@@ -1,10 +1,12 @@
-import { Component, ViewChild, ElementRef, Renderer } from '@angular/core';
+import { Component, ElementRef, Renderer } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { EventServiceProvider } from '../../providers/event-service/event-service';
 import { take } from 'rxjs/operators';
-import {Content} from 'ionic-angular';
 import { EventInfoPage } from '../event-info/event-info';
+import { UserinfoProvider } from '../../providers/userinfo/userinfo';
+import { GeneralproviderProvider } from '../../providers/generalprovider/generalprovider';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
   selector: 'page-home',
@@ -14,6 +16,9 @@ export class HomePage {
 
   events$: Observable<any[]>;
   isEventFinished = false;
+  heartColor = "iconwhite";
+  favStr = localStorage.getItem('fav');
+  favArr = this.favStr.split(',');
 
   //For Header
   headerHeight = 150;
@@ -26,49 +31,45 @@ export class HomePage {
   public showSearchBar = false;
   public showTitle = true;
 
+  email = localStorage.getItem('authUser');
+
   constructor(
     public navCtrl: NavController,
     public eventService: EventServiceProvider,
     public element: ElementRef, 
-    public renderer: Renderer
+    public renderer: Renderer,
+    private userInfoProvider: UserinfoProvider,
+    private generalProvider: GeneralproviderProvider,
+    private socialSharing: SocialSharing
     ) {}
 
   ionViewDidLoad() {
     this.getEvents();
-    // this.content.ionScroll.subscribe((ev) => {
-    //   this.resizeHeader(ev);
-    // })
   }
 
   ionViewDidEnter() {
     let date = new Date();
     let hour = date.getHours();
-    console.log("Curent time : ", hour);
 
     if(hour < 12) {
+      this.day = 'Morning';
       this.backgroundImg = '../../assets/imgs/sunrise.jpg';
       this.hiddenImg = '../../assets/imgs/snoopy-hi.gif';
     }
     else if(hour > 12 && hour < 20) {
+      this.day = 'Afternoon';
       this.backgroundImg = '../../assets/imgs/sunset.jpg';
       this.hiddenImg = '../../assets/imgs/snoopy.gif';
     }
     else {
+      this.day = 'Evening';
       this.backgroundImg = '../../assets/imgs/nightsky.jpg';
       this.hiddenImg = '../../assets/imgs/snoopy-goodnight.gif';
     }
-  }
 
-  // resizeHeader(ev){
-    // if(ev.scrollTop > 200){
-    //   this.headerHeight = 60;   
-    // }
-    // else { 
-    //   this.headerHeight = 200 - ev.scrollTop;
-    //   console.log("scrollTop: ", ev.scrollTop);
-    //   console.log("headerHeight: ", this.headerHeight);
-    // }
-  // }
+    this.userInfoProvider.getUserFavourites(this.email);
+    this.favStr = localStorage.getItem('fav');
+  }
 
   clickedSearchIcon() {
     this.showSearchBar = !this.showSearchBar;
@@ -104,9 +105,12 @@ export class HomePage {
   }
 
   doRefresh(refresher) {
+    this.generalProvider.showLoading('');
+   
     this.getEvents();
-
     refresher.complete();
+    
+    this.generalProvider.hideLoading();
   }
 
   getEvents() {
@@ -115,5 +119,61 @@ export class HomePage {
 
   displayEventInfo(eventKey: string) {
     this.navCtrl.push(EventInfoPage,{eventKey:eventKey});
+  }
+
+  addToFav(event) {
+    let eventId = event.target.id+"";
+    eventId = eventId.replace("\_fav","")
+    let favArr = this.favStr.split(',');
+    let favFound = false;
+
+    for(var i=0;i<favArr.length;i++) {
+      if(favArr[i] == eventId) {
+        if(favArr.length > 1) {
+          favArr.splice(i,1);
+        }
+        else {
+          favArr[0] = "";
+        }
+
+        document.getElementById(eventId+"_fav").classList.remove("iconred");
+        document.getElementById(eventId+"_fav").classList.add("iconwhite");
+        favFound = true;
+
+        this.generalProvider.showToast("Removed from Favourites");
+        break;
+      }
+    }
+
+    if(!favFound) {
+      if(favArr[0] == "") {
+        favArr[0] = eventId;
+      }
+      else {
+        favArr.push(eventId);  
+      }  
+
+      document.getElementById(eventId+"_fav").classList.remove("iconwhite");
+      document.getElementById(eventId+"_fav").classList.add("iconred");
+
+      this.generalProvider.showToast("Added to Favourites");
+    }
+
+    if(favArr.length > 1) {
+      this.favStr = favArr.join(',');
+    }
+    else {
+      this.favStr = favArr[0];
+    }
+    
+    localStorage.setItem('fav', this.favStr);
+    this.userInfoProvider.modifyFavourites(this.email, this.favStr);
+  }
+
+  shareEvent(event) {
+    let eventId = event.target.id+"";
+    eventId = eventId.replace("\_share","");
+
+    this.socialSharing.share("I found this event which is quite fun and interesting! And I would like to invite you to come with me! For more info, download Anyvent App from your App Store/Playstore now!");
   }
 }

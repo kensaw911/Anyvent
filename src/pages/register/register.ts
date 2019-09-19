@@ -4,6 +4,7 @@ import { userinfo } from '../../models/userinfo';
 import { GeneralproviderProvider } from '../../providers/generalprovider/generalprovider';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { UserinfoProvider } from '../../providers/userinfo/userinfo';
 
 /**
  * Generated class for the RegisterPage page.
@@ -51,7 +52,8 @@ export class RegisterPage {
     public navParams: NavParams,
     private generalProvider: GeneralproviderProvider,
     private registerAuth: AngularFireAuth,
-    private angularfireDB: AngularFireDatabase
+    private angularfireDB: AngularFireDatabase,
+    private userInfoProvider: UserinfoProvider
     ) {
   }
 
@@ -192,8 +194,8 @@ export class RegisterPage {
       registeredUserInfo['favourites'] = '';
 
       //profile registration
-      let filteredEmail = email.replace('.', 'dot');
-      this.angularfireDB.object('profile/' + filteredEmail).set(registeredUserInfo);
+      this.userInfoProvider.setUserDetails(email, registeredUserInfo);
+
     })
     .then(() => {
       let user = this.registerAuth.auth.currentUser;

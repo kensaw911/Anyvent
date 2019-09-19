@@ -47,11 +47,13 @@ page-home {
             position: absolute;
             right: 0;
             bottom: 80px;
+            height: 30px;
             border-top-left-radius: 20px;
 
             ion-icon {
                 margin-left: 10px;
-                margin-right: 10px;
+                margin-right: 15px;
+                margin-top: 5px;
                 float: right;
                 font-size: 1.3em;
                 color: #fff;
@@ -138,10 +140,6 @@ page-home {
         }
     }
 
-    .list {
-        // margin-top: 100px;
-    }
-
     .notification {
         color: rgb(34,34,34);
         display: flex;
@@ -160,6 +158,5 @@ page-home {
 
     .imghidden {
         height: 95px !important;
-        text-align: center !important;
     }
 }

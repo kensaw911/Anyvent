@@ -24,6 +24,7 @@ import { EventInfoPage } from '../pages/event-info/event-info';
 import { Calendar } from '@ionic-native/calendar';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { UserinfoProvider } from '../providers/userinfo/userinfo';
 
 
@@ -69,7 +70,8 @@ import { UserinfoProvider } from '../providers/userinfo/userinfo';
     Calendar,
     LaunchNavigator,
     EmailComposer,
-    UserinfoProvider
+    UserinfoProvider,
+    SocialSharing
   ]
 })
 export class AppModule {}

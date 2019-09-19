@@ -30,4 +30,34 @@ export class UserinfoProvider {
     }
   }
 
+  public setUserDetails(email:string, userInfo:any) {
+    //profile registration
+    let filteredEmail = email.replace('.', 'dot');
+    this.afDatabase.object('profile/' + filteredEmail).set(userInfo);
+  }
+
+  public modifyFavourites(email:string, favStr:string) {
+    //add or remove favourites of user
+    let filteredEmail = email.replace('.', 'dot');
+    this.afDatabase.object('profile/' + filteredEmail + '/favourites').set(favStr);
+  }
+
+  public getUserFavourites(email:string) {
+    let profileSubs: Subscription;
+
+    if(email) {
+      let filteredEmail = email.replace('.', 'dot');
+      try{
+        profileSubs = this.afDatabase.list('profile/' + filteredEmail + '/favourites').valueChanges().subscribe(profile => {
+
+          localStorage.setItem('fav', profile[0]+"");
+
+          profileSubs.unsubscribe();
+        });
+      }catch(e) {
+
+      }
+    }
+  }
+
 }

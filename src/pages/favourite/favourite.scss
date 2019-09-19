@@ -1,3 +1,107 @@
 page-favourite {
+    ion-navbar.toolbar {
+        min-height: 60px;
+    }
 
+    ion-header {
+        position:absolute !important;
+
+        .toolbar-background {
+            background: rgba(34,34,34,0.3);
+        }
+
+        .toolbar-title {
+            color: whitesmoke !important;
+        }
+
+        .headerBackground {
+            background-size: cover !important;
+            top: 0 !important;
+            width: 100% !important;
+            z-index: -1 !important;
+            height: 60px !important;
+            position: absolute !important;
+        }
+    }
+
+    ion-card {
+        margin-bottom: 30px !important;
+        min-height: 250px !important;
+
+        ion-item {
+            padding: 0 !important;
+        }
+
+        ion-label {
+            margin: 0 !important;
+        }
+
+        .eventImg {
+            width: 100% !important;
+            height: 250px !important;
+        }
+
+        .eventDesc {
+            background: rgba(34,34,34,0.8);
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            position: absolute;
+        }
+
+        .eventTitle {
+            font-size: 1.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+            float: left;
+            max-height: 44px !important;
+            overflow: hidden;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            white-space: pre-wrap;      /* CSS3 */   
+            white-space: -moz-pre-wrap; /* Firefox */    
+            white-space: -pre-wrap;     /* Opera <7 */   
+            white-space: -o-pre-wrap;   /* Opera 7 */
+            word-wrap: break-word;
+        }
+    
+        .eventDateTime {
+            font-size: 0.8em;
+            width: 100%;
+            padding-left: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            color: #b2eff6;
+            float: left;
+        }
+
+        .eventCompany {
+            font-size: 0.8em;
+            width: 100%;
+            padding-left: 5px;
+            padding-bottom: 2px;
+            color: #9daaca;
+            float: left;
+        }
+
+        .item-inner {
+            padding: 0 !important;
+        }
+
+
+    }
+
+    .notification {
+        color: darkgray;
+        font-size: 1.2em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+
+        .emptyEventimg {
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
 }

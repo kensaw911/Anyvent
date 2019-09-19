@@ -34,8 +34,7 @@ export class LoginPage {
     private generalProvider: GeneralproviderProvider,
     private loginAuth: AngularFireAuth,
     private fb: Facebook,
-    private userInfoProvider: UserinfoProvider,
-    private angularfireDB: AngularFireDatabase
+    private userInfoProvider: UserinfoProvider
     ) 
   {
 
@@ -253,12 +252,12 @@ export class LoginPage {
   loginWithFacebook() {
     this.fb.login(['public_profile', 'email'])
     .then((response: FacebookLoginResponse) => {
-      var message = {
-        title: "Login Successful",
-        subtitle: ""
-      }
+      // var message = {
+      //   title: "Login Successful",
+      //   subtitle: ""
+      // }
       
-      this.generalProvider.alertMessage(message);
+      // this.generalProvider.alertMessage(message);
 
       console.log('Status: ', response.status, '\nuserID: ', response.authResponse.userID);
       this.getFbEmail(response.authResponse.userID);
@@ -284,15 +283,14 @@ export class LoginPage {
       email = response.email;
     })
     .then(() => {
-      //profile registration
+      //verify if user exist
       this.userInfoProvider.getUserDetails(email);
 
       if(!localStorage.getItem('fname')) {
         this.userInfo.rewardPoints = 0;
         this.userInfo.favourites = '';
         //profile registration
-        let filteredEmail = email.replace('.', 'dot');
-        this.angularfireDB.object('profile/' + filteredEmail).set(this.userInfo);
+        this.userInfoProvider.setUserDetails(email, this.userInfo);
       }
 
       localStorage.setItem('authUser', email);

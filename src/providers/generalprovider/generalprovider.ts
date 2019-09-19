@@ -10,6 +10,7 @@ import { Network } from '@ionic-native/network';
 */
 @Injectable()
 export class GeneralproviderProvider {
+  loadingHandler;
 
   constructor(
     private alertCtrl: AlertController,
@@ -30,14 +31,19 @@ export class GeneralproviderProvider {
   }
 
   //show loading icon
-  public loading(details: string) {
-    let loading = this.loadingCtrl.create({
+  public showLoading(details: string) {
+    this.loadingHandler = this.loadingCtrl.create({
       dismissOnPageChange: true,
       content: details
     });
 
-    loading.present();
-    return loading;
+    this.loadingHandler.present();
+    return this.loadingHandler;
+  }
+
+  //hide loading icon
+  public hideLoading() {
+    this.loadingHandler.dismiss();
   }
 
   //alert confirmation box
@@ -96,9 +102,13 @@ export class GeneralproviderProvider {
 
    //Display toast message
    public showToast(description: string) {
-     this.toast.create({
+     let showToast = this.toast.create({
        message: description,
-       duration: 3000
-     }).present();
+       duration: 1500,
+       dismissOnPageChange: true,
+       showCloseButton: true
+     });
+     
+     showToast.present();
    }
 }
