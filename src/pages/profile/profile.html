@@ -1,0 +1,52 @@
+
+<div class="qr-modal" text-center [hidden]="overlayHidden" (click)="closeClearQr()">
+  <ngx-qrcode [qrc-value]="createdCode" qrc-class="test-class" class="clearQrCode"></ngx-qrcode>
+</div>
+
+<ion-content parallax class="background">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="main-content">
+    <!-- <div class="timeline_photo" [style.backgroundImage]="'url(' + photoUrl + ')'">   
+    </div> -->
+
+    
+    <div class="info">
+      <!-- <img [src]="photoUrl" class="profile_photo"> -->
+      
+      <div>
+        <button style="width: 10%;padding: 0;background-color: white;" navPop>
+          <ion-icon class="back-icon" name="arrow-round-back"></ion-icon> 
+        </button>
+        <h1 style="display: inline-block;width: 80%;text-align: center;"> {{firstName}} {{lastName}}</h1>
+      </div>
+      
+      <ion-list no-lines>
+        <div class="infoHeader qrCode">
+        <ngx-qrcode [(qrc-value)]="createdCode" (click)="openClearQr()"></ngx-qrcode>
+        </div>
+
+        <div class="infoHeader">
+          <h5>
+            Reward Points
+          </h5>
+          <h2>{{rewardPoints}}</h2>
+        </div>
+
+        <ion-item>
+          <ion-icon name="mail" item-start></ion-icon> 
+          <ion-input type="email" placeholder="Email Address" [(ngModel)]="email" readonly="true"></ion-input>
+        </ion-item>
+
+      </ion-list>
+
+      <button class="logout" ion-button block outline (click)="logout(false)" color="danger">Logout</button>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <!-- <ion-navbar>
       <ion-title *ngIf="showTitle">
         Events
       </ion-title>
@@ -10,12 +10,15 @@
           <button ion-button (click)="clickedSearchIcon()"><ion-icon name="search"></ion-icon></button>
           <button ion-button><ion-icon name="more"></ion-icon></button>
       </ion-buttons>
-  </ion-navbar>
+  </ion-navbar> -->
+
+  <header [title]="'Events'"></header>
 
   <div class="extraHeader header-size-transition" [style.transition-duration]="'.' + transDuration + 's'" [style.max-height]="headerHeight + 'px'">
     <div class="extraHeader" [style.background]="'url(' + backgroundImg + ')'">
-      <div class="extraHeaderContent" float-right>
-        Good {{day}}, {{lastName}}
+      <div class="extraHeaderContent">
+        <!-- Good {{day}}, {{lastName}} -->
+        Good {{day}}, Wish you have a good day ahead!
       </div>
     </div>
   </div>
@@ -36,6 +39,7 @@
     <ion-card *ngFor="let event of events$ | async">
       <ion-item [id]=event.key>
         <img class="eventImg" src="../../assets/imgs/event.jpg" (click)="displayEventInfo(event.key)">
+        <div class="payment">{{event.payment}}</div>
         <div class="buttons">
           <ion-icon name="heart" [id]="event.key + '_fav'" (click)="addToFav($event)" [ngClass]="favArr.includes(event.key)?'iconred':'iconwhite'"></ion-icon>
           <ion-icon name="share" [id]="event.key + '_share'" (click)="shareEvent($event)"></ion-icon>

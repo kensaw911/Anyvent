@@ -1,6 +1,32 @@
 
-<ion-tabs (ionChange)="transition($event)">
+<ion-tabs (ionChange)="transition($event)" (touchstart)="touchEvent($event)">
   <ion-tab tabIcon="home" [root]="home" tabTitle="Home"></ion-tab>
   <ion-tab tabIcon="heart" [root]="favourite" tabTitle="Favourites"></ion-tab>
   <ion-tab tabIcon="contact" [root]="freelance" tabTitle="Freelance"></ion-tab>
 </ion-tabs>
+
+<div id="mySidenav" class="sidenav">
+  
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+
+  <div class="alignMiddle">
+    <img class="imgFixedSize " src="../../assets/imgs/user_profile2.png">
+  </div>
+  <br/>
+  <div class="profile alignMiddle">
+    {{firstName}}
+  </div>
+  <div class="profile alignMiddle marginTop">
+    Reward Points
+  </div>
+  <div class="profile alignMiddle">
+    {{rewardPoints}}
+  </div>
+  
+  <div class="bottom">
+    <button ion-button class="alignMiddle normalButton" (click)="viewProfile()">View Profile</button>
+    <button ion-button class="alignMiddle normalButton" (click)="beOrganizer()">Be an organizer!</button>
+    <button ion-button class="alignMiddle logout" (click)="logout()">Logout</button>
+  </div>
+  
+</div>

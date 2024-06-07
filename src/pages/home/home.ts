@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { EventServiceProvider } from '../../providers/event-service/event-service';
 import { take } from 'rxjs/operators';
@@ -8,6 +8,7 @@ import { UserinfoProvider } from '../../providers/userinfo/userinfo';
 import { GeneralproviderProvider } from '../../providers/generalprovider/generalprovider';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -26,7 +27,7 @@ export class HomePage {
   hiddenImg = '';
   transDuration = 2;
   day = 'Evening';
-  lastName = localStorage.getItem('fname');
+  // lastName = localStorage.getItem('fname');
 
   public showSearchBar = false;
   public showTitle = true;
@@ -45,6 +46,14 @@ export class HomePage {
 
   ionViewDidLoad() {
     this.getEvents();
+  }
+
+  ionViewWillEnter() {
+    console.log("hello2", this.email);
+    this.userInfoProvider.getUserFavourites(this.email);
+    console.log("hello3", localStorage.getItem('fav'));
+    this.favStr = localStorage.getItem('fav');
+    this.favArr = this.favStr.split(',');
   }
 
   ionViewDidEnter() {
@@ -98,7 +107,7 @@ export class HomePage {
       this.headerHeight = 60;
       this.transDuration = 2;
     }
-    else if(event.scrollTop < 10) {
+    else if(event.scrollTop < 100) {
       this.headerHeight = 150;
       this.transDuration = 8;
     }
@@ -123,8 +132,19 @@ export class HomePage {
 
   addToFav(event) {
     let eventId = event.target.id+"";
-    eventId = eventId.replace("\_fav","")
-    let favArr = this.favStr.split(',');
+    eventId = eventId.replace("\_fav","");
+
+    let favArr;
+    
+    if(this.favStr != "undefined") {
+     favArr = this.favStr.split(',');
+    }
+    else {
+      favArr = new Array();
+    }
+
+    console.log("before: ", favArr);
+   
     let favFound = false;
 
     for(var i=0;i<favArr.length;i++) {
@@ -167,6 +187,8 @@ export class HomePage {
     }
     
     localStorage.setItem('fav', this.favStr);
+
+    console.log("after : ", favArr);
     this.userInfoProvider.modifyFavourites(this.email, this.favStr);
   }
 

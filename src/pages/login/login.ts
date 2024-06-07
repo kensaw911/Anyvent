@@ -7,7 +7,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { TabsPage } from '../tabs/tabs';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { UserinfoProvider } from '../../providers/userinfo/userinfo';
-import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the LoginPage page.
@@ -112,7 +111,7 @@ export class LoginPage {
               if(this.generalProvider.validateEmail(data.recoverEmail))
               {
                 let message;
-                var loading = this.generalProvider.loading('Sending recovery email...');
+                var loading = this.generalProvider.showLoading('Sending recovery email...');
 
                 console.log("A recovery email sent to " + data.recoverEmail);
                 this.loginAuth.auth.sendPasswordResetEmail(data.recoverEmail).then(() => {
@@ -203,7 +202,7 @@ export class LoginPage {
   //Login member
   login() {
     //show loading icon
-    this.loading = this.generalProvider.loading('Logging in...');
+    this.loading = this.generalProvider.showLoading('Logging in...');
 
 
     this.loginAuth.auth.signInWithEmailAndPassword(this.userInfo.email, this.userInfo.password)
@@ -213,7 +212,6 @@ export class LoginPage {
       //check email verification
       if(this.loginAuth.auth.currentUser.emailVerified) {
         //once verified, set root page as tab page
-        // this.navCtrl.setRoot(TabsPage);
         this.navCtrl.push(TabsPage, {
           email: this.userInfo.email
         });

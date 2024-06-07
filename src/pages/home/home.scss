@@ -134,6 +134,7 @@ page-home {
             right: 0;
             padding-bottom: 40px;
             padding-right: 15px;
+            text-align: center;
             
             font-size: 20px;
             color: rgba(245, 245, 245, 0.9);
@@ -158,5 +159,25 @@ page-home {
 
     .imghidden {
         height: 95px !important;
+    }
+
+    .payment {
+        text-transform: uppercase !important;
+        font-size: 0.8em;
+        left: 0;
+        top: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 50px;
+        height: 20px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: bold;
+        color: blue;
+        background-color: rgba(245, 245, 245, 0.9)
     }
 }

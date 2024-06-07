@@ -85,7 +85,7 @@ export class RegisterPage {
     let errCount = 0;
 
     //show loading icon
-    this.loading = this.generalProvider.loading('Validating...');
+    this.loading = this.generalProvider.showLoading('Validating...');
 
     //VALIDATION
     //first name validation

@@ -19,4 +19,87 @@ page-tabs {
             }
         }
     }
+
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+    
+    .profile,a  {
+        text-decoration: none;
+        font-size: 1.3em;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .viewProfile {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        font-size: 1.1em;
+        color: lightblue;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .marginTop {
+        padding-top: 10px;
+    }
+    
+    .sidenav a:hover {
+    color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+    }
+
+    .alignMiddle {
+        text-align: center;
+    }
+
+    .imgFixedSize {
+        max-height: 80px;
+        max-width: 80px;
+    }
+
+    .bottom {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        text-align: center;
+
+        .normalButton {
+            width: 90%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-self: center;
+            border-radius: 30px;
+            background-color: rgba(220,220,220,0.9);
+            color: black;
+            font-weight: bold;
+        }
+
+        .logout {
+            width: 90%;
+            border-radius: 30px;
+            background-color: red !important;
+            color: white !important;
+            margin-top: 100px;
+        }
+    }
+
 }

@@ -5,6 +5,10 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 import { FavouritePage } from '../favourite/favourite';
 import { FreelancePage } from '../freelance/freelance';
 import { UserinfoProvider } from '../../providers/userinfo/userinfo';
+import { LoginPage } from '../login/login';
+import { GeneralproviderProvider } from '../../providers/generalprovider/generalprovider';
+import { AlertController } from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the TabsPage page.
@@ -26,21 +30,28 @@ export class TabsPage {
   home = HomePage;
   favourite = FavouritePage;
   freelance = FreelancePage;
+  firstName: string;
+  rewardPoints: string;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public nativePageTransitions: NativePageTransitions,
+    private generalProvider: GeneralproviderProvider,
+    private alertCtrl: AlertController,
     public userInfo: UserinfoProvider) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
+    this.firstName = localStorage.getItem('fname');
+    this.rewardPoints = localStorage.getItem('rewardPoints');
+  }
+
+  ionViewCanEnter() {
     let email: string;
 
-    console.log('ionViewDidLoad TabsPage');
-
     email = localStorage.getItem('authUser');
-    this.userInfo.getUserDetails(email);
+    this.userInfo.getUserDetails(email);  
   }
 
   public transition(e):void {
@@ -75,5 +86,61 @@ export class TabsPage {
       case (currentIndex > index):
         return ('right');
     }
+  }
+
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    // ignore the style error
+    let tabs = document.getElementsByClassName("tabs")[0] as HTMLElement;
+    tabs.style.marginLeft = "0";
+  }
+
+  touchEvent(event) {
+    // console.log(event);
+    var side_menu_width = document.getElementById("mySidenav").offsetWidth;
+
+    if(side_menu_width > 0) {
+      this.closeNav();
+    }
+  }
+
+  logout() {
+    //alert confirmation box
+    let alert = this.alertCtrl.create({
+      title: 'Warning',
+      message: "Are you sure you want to logout?",
+      buttons: [
+        {
+          text: 'Yes',
+          role: 'cancel',
+          handler: () => {
+            localStorage.removeItem('authUser');
+            localStorage.removeItem('fname');
+            localStorage.removeItem('rewardPoints');
+            this.navCtrl.setRoot(LoginPage);
+          }
+        },
+        {
+          text: 'No',
+          handler: () => {
+          }
+        }
+      ]
+    });
+    
+    alert.present();
+  }
+
+  viewProfile() {
+    this.navCtrl.push(ProfilePage);
+  }
+
+  beOrganizer() {
+    let msg = {
+      title: 'Coming Soon', 
+      subtitle: 'Oops. The feature has not implemented yet.'
+    };
+    
+      this.generalProvider.alertMessage(msg);
   }
 }

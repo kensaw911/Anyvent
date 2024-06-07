@@ -46,33 +46,6 @@ export class GeneralproviderProvider {
     this.loadingHandler.dismiss();
   }
 
-  //alert confirmation box
-  public confirmationBox(messageInfo: string) {
-    let alert = this.alertCtrl.create({
-      title: 'Warning',
-      message: messageInfo,
-      buttons: [
-        {
-          text: 'Yes',
-          role: 'cancel',
-          handler: () => {
-            alert.dismiss(true);
-            return false;
-          }
-        },
-        {
-          text: 'No',
-          handler: () => {
-            alert.dismiss(false);
-            return false;
-          }
-        }
-      ]
-    });
-    
-    return alert;
-  }
-
    //Validate email 
    public validateEmail(email: string) 
    {

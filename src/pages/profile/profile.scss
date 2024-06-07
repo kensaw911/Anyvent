@@ -1,0 +1,101 @@
+page-profile {
+
+    .main-content {
+        height: 100%;
+    }
+
+    .background {
+        // background-image: url('../assets/imgs/home_background.jpg');
+        background-image: white;
+        background-size: cover;                      
+        background-repeat: no-repeat;
+      }
+
+    .navbar {
+        .toolbar-background {
+            background: transparent !important;
+            border: none;
+        }
+    }
+
+    .timeline_photo {
+        height: 300px;
+        background-size: cover;
+        filter: blur(5px);
+        background-position: center center;
+    }
+
+    .info {
+        width: 100%;
+        margin-bottom: 50px;   
+    }
+
+    .profile_photo {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        z-index: 10;
+        margin-top: -70px;
+        position: relative;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        box-shadow: -6px 15px 81px 3px rgba(0, 0, 0, 0.75); 
+    }
+
+    .logout {
+        border-radius: 20px;
+        width: 90%;
+        margin: auto !important;
+    }
+
+    .infoHeader {
+        text-align: center;
+        width: 150px;
+        position: relative;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    ion-list ion-item {
+        color: rgba(0, 0, 0, 0.8) !important;
+        background-color: #ecf0f1 !important;
+        border-radius: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .qr-modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 20;
+        top: 0;
+        left: 0;   
+
+        .clearQrCode {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin:0 auto;
+            top:50%;
+            transform:translateY(-50%);
+            z-index: 9999;
+        }
+    }
+
+    .test-class > img {
+        width: 250px;
+      }
+
+    .qrCode {
+        margin-top: 120px;
+    }
+
+    .back-icon {
+      font-weight: bolder;
+      font-size: 2.2em;
+      margin-left: 20px;
+    }
+}

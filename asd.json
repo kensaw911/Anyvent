@@ -1,154 +1,372 @@
 {
   "events" : {
     "-LGXOembRsZeAmrrgIpC" : {
-      "title" : "Interestelar",
-      "date" : "2014", 
-	  "key" : "-LGXOembRsZeAmrrgIpC"
+      "eventName" : "Let's Talk: Success metrics to measure a UX/UI design",
+	  "eventDesc" : "You know that you should be tracking UX metrics for your products and services. After all, if you don’t measure the UX, how do you know how it's performing? How do you know if a design change is for the better, or for the worse? How can you justify investing in UX, if you can’t measure the benefits?",
+      "date" : "5/8/2019", 
+	  "time" : "6:30 am - 8:30 pm",
+	  "eventType" : "Technology, Design, Talks",
+	  "location" : "aCAT Penang",
+	  "email" : "natasha@acatpenang.com",
+	  "phone" : "",
+	  "key" : "-LGXOembRsZeAmrrgIpC",
+	  "payment" : "free"
     },
     "-LGXOemho32cuDvUv8w2" : {
-      "title" : "Avengers: Infinity War",
-      "date" : "2018", 
-	  "key" : "-LGXOemho32cuDvUv8w2"
+       "eventName" : "共创巅峰.创业.团队.营销.销售讲座会",
+	  "eventDesc" : "",
+      "date" : "7/8/2019", 
+	  "time" : "7:00 pm - 10:00 pm",
+	  "eventType" : "Business, Entrepreneurship, Talks",
+	  "location" : "Penang Digital Library",
+	  "email" : "",
+	  "phone" : "0168585229",
+	  "key" : "-LGXOemho32cuDvUv8w2",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwr" : {
-      "title" : "Black Panther",
-      "date" : "2018", 
-	  "key" : "-LGXOemjKu55OzbHnnwr"
+      "eventName" : "3-day Web App Bootcamp with ReactJS + Firebase",
+	  "eventDesc" : "Step-by-Step of Developing An Interactive Web Application even if you only have basic knowledge in HTML, CSS, and JavaScript.",
+      "date" : "10/8/2019 - 12/8/2019", 
+	  "time" : "9:30 am - 5:30 pm",
+	  "eventType" : "Technology, Talks",
+	  "location" : "aCAT Penang",
+	  "email" : "",
+	  "phone" : "",
+	  "key" : "-LGXOemjKu55OzbHnnwr",
+	  "payment" : "19"
     },
     "-LGXOemjKu55OzbHnnws" : {
-      "title" : "Independece Day",
-      "date" : "1996", 
-	  "key" : "-LGXOemjKu55OzbHnnws"
+    "eventName" : "Penang Orchid Show",
+	  "eventDesc" : "The Penang Orchid Show 2019 is a festival for orchid lovers and enthusiasts. It is a week-long event focusing on competitions and sales of orchids. Orchid judges from all states of Malaysia and Singapore converged to this grand event, and the event aims to go international in 2020.",
+      "date" : "11/8/2019 - 18/8/2019", 
+	  "time" : "9:00 am - 7:00 pm",
+	  "eventType" : "Hobby, Competition, Sales",
+	  "location" : "Penang Botanic Gardens",
+	  "email" : "kimlean1229@gmail.com",
+	  "phone" : "012-489 1577",
+	  "key" : "-LGXOemjKu55OzbHnnws",
+	  "payment" : "free"
     },
     "-LGXOemkVw0k0IYfWigp" : {
-      "title" : "Back to the Future",
-      "date" : "1985", 
-	  "key" : "-LGXOemkVw0k0IYfWigp"
+      "eventName" : "CAPTURE WITH OLYMPUS",
+	  "eventDesc" : "Fashion photography blends creative artistry with technical mastery, requiring an eye for beauty and details in setting up a scene, and being able to improvise on set to create new shooting opportunities. Join veteran fashion photographer Teh Young-Sun and Olympus visionary as he shares his skills in this exclusive workshop, where you will use a combination of natural daylight and Olympus flashes with the Western Cemetary backdrop to create truly unique fashion portraits!",
+      "date" : "11/8/2019", 
+	  "time" : "9:00 am - 11:00 am",
+	  "eventType" : "Photography, Talks",
+	  "location" : "Western Cemetary",
+	  "email" : "-",
+	  "phone" : "016-414 8224",
+	  "key" : "-LGXOemkVw0k0IYfWigp",
+	  "payment" : "free"
     },
 	 "-LGXOembRsZeAmrrgIpa" : {
-      "title" : "Interestelar",
-      "date" : "2014", 
-	  "key" : "-LGXOembRsZeAmrrgIpa"
+      "eventName" : "Google Analytics 2 Days Bootcamp",
+	  "eventDesc" : "Calling all business owner, entrepreneur and engineers software developers, this is the bootcamp that bring out the best of both.",
+      "date" : "17/8/2019 - 18/8/2019", 
+	  "time" : "9:30 am - 1:30 pm",
+	  "eventType" : "Technology, Talks",
+	  "location" : "Penang @CAT",
+	  "email" : "",
+	  "phone" : "",
+	  "key" : "-LGXOembRsZeAmrrgIpa",
+	  "payment" : "free"
     },
     "-LGXOemho32cuDvUv8w3" : {
-      "title" : "Avengers: Infinity War",
-      "date" : "2018", 
-	  "key" : "-LGXOemho32cuDvUv8w3"
+      "eventName" : "SCI Peace Run",
+	  "eventDesc" : "SCI Peace Run sees 400 physically-challenged children and adults from 12 special schools and homes take part in a 1.5km non-competitive walk. There will also be a 7km competitive run for abled runners, or just to be part of the leisure 1.5km Peace Walk",
+      "date" : "18/8/2019", 
+	  "time" : "7:30 AM",
+	  "eventType" : "Run, Health",
+	  "location" : "Penang City Park",
+	  "email" : "sci.penang@gmail.com",
+	  "phone" : "012-412 2014",
+	  "key" : "-LGXOemho32cuDvUv8w3",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnws" : {
-      "title" : "Black Panther",
-      "date" : "2018", 
-	  "key" : "-LGXOemjKu55OzbHnnws"
+      "eventName" : "Goodwill Eating Charity Food Fair",
+	  "eventDesc" : "Goodwill Eating Charity Food Fair is a fund-raising event to support the welfare and health care of both adults and children having Thalassaemia in the country. It returns bigger for the second time at Sekolah Jenis Kebangsaan (C) Shang Wu, happening on the 18th of August. It is worth mentioning that they will bring you a wide variety of good food, including home-cooked specialities, Penang hawkers as well as dry food items. Head over with an empty stomach and we guarantee, you’d leave with a full and satisfied tummy.",
+      "date" : "18/8/2019", 
+	  "time" : "9:00 am - 3:00 pm",
+	  "eventType" : "Food, Sales",
+	  "location" : "Sekolah Jenis Kebangsaan (C) Shang Wu",
+	  "email" : "",
+	  "phone" : "",
+	  "key" : "-LGXOemjKu55OzbHnnws",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwt" : {
-      "title" : "Independece Day",
-      "date" : "1996", 
-	  "key" : "-LGXOemjKu55OzbHnnwt"
+      "eventName" : "International Electronic Elite Run Penang Chapter",
+	  "eventDesc" : "Facilitate rapid industry integration. Develop Penang into a key hub for international electronics manufacturers and an e-procurement corridor.",
+      "date" : "18/8/2019", 
+	  "time" : "7:15 AM",
+	  "eventType" : "Run, Health",
+	  "location" : "Penang Skills Development Centre",
+	  "email" : "helpdesk@howei.com",
+	  "phone" : "",
+	  "key" : "-LGXOemjKu55OzbHnnwt",
+	  "payment" : "free"
     },
     "-LGXOemkVw0k0IYfWigq" : {
-      "title" : "Back to the Future",
-      "date" : "1985", 
-	  "key" : "-LGXOemkVw0k0IYfWigq"
+      "eventName" : "The 7 Habits Of Highly Effective People",
+	  "eventDesc" : "Habits are powerful forces in our lives. They determine our level of effectiveness or ineffectiveness. The purpose of The 7 Habits of Highly Effective People is to help you lead your life in a truly effective way. They represent a proven process of personal and interpersonal growth that can have an immediate and lasting impact.",
+      "date" : "19/8/2019", 
+	  "time" : "8:30 am - 5:00pm",
+	  "eventType" : "Entrepreneurship, Talks, Self-Improvement",
+	  "location" : "Evergreen Laurel Hotel",
+	  "email" : "marketing@leadershipresources.my",
+	  "phone" : "",
+	  "key" : "-LGXOemkVw0k0IYfWigq",
+	  "payment" : "free"
     },
 	 "-LGXOembRsZeAmrrgIpE1" : {
-      "title" : "Interestelar",
-      "date" : "2014", 
-	  "key" : "-LGXOembRsZeAmrrgIpE1"
+      "eventName" : "HOMElove Home & Living Expo Penang",
+	  "eventDesc" : "Whether you’re moving in or want to revamp your space, HOMElove Home & Living Expo Penang is the go-to place. They held their event twice in Penang last year and because of all the GOOD DEALS that they have, they’re back again by popular demand! That’s right, save up to 80% and WIN exciting prizes.",
+      "date" : "23/8/2019 - 25/8/2019", 
+	  "time" : "11:00 am - 9:00 pm",
+	  "eventType" : "Sales",
+	  "location" : "Setia SPICE Convention Centre",
+	  "email" : "https://www.facebook.com/HOMEloveExhibition/",
+	  "phone" : "",
+	  "key" : "-LGXOembRsZeAmrrgIpE1",
+	  "payment" : "free"
     },
     "-LGXOemho32cuDvUv8w42" : {
-      "title" : "Avengers: Infinity War",
-      "date" : "2018", 
-	  "key" : "-LGXOemho32cuDvUv8w42"
+      "eventName" : "KBJ Ratu Kebaya 2019, Grand Final",
+	  "eventDesc" : "'KBJ Ratu Kebaya' is a beauty pageant that aims to promote the Baba & Nyonya culture in Penang. The event will also raise funds for selected charity homes in Penang.",
+      "date" : "24/8/2019", 
+	  "time" : "6:00 pm - 11:00 pm",
+	  "eventType" : "Competition",
+	  "location" : "Kompleks Bukit Jambul",
+	  "email" : "admin@kbj.com.my",
+	  "phone" : "04-645 6788",
+	  "key" : "-LGXOemho32cuDvUv8w42",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwt3" : {
-      "title" : "Black Panther",
-      "date" : "2018", 
-	  "key" : "-LGXOemjKu55OzbHnnwt3"
+      "eventName" : "Bagan Festival - Merdeka Celebration",
+	  "eventDesc" : "Bagan Festival @ Butterworth Art Walk is inspired through Car Free evening aimed at reducing the use of cars on roads. To bring the community closer to local arts and culture, Bagan Festival celebrates Malaysia's Independence Day - Merdeka.",
+      "date" : "24/8/2019", 
+	  "time" : "4:00 pm - 11:00 pm",
+	  "eventType" : "Festival",
+	  "location" : "Butterworth Art Walk",
+	  "email" : "butterworthbaharu@mpsp.gov.my",
+	  "phone" : "04-549 7555/04-549 7807",
+	  "key" : "-LGXOemjKu55OzbHnnwt3",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwu4" : {
-      "title" : "Independece Day",
-      "date" : "1996", 
-	  "key" : "-LGXOemjKu55OzbHnnwu4"
+      "eventName" : "I Love George Town Run",
+	  "eventDesc" : "If you have been eating too much just like us, it is time to start training for a marathon to be healthy again! I Love George Town Run will be happening at 7:00 AM on the 25th August 2019. We can’t think of any other marathon to join apart from the one that shows love to our beautiful state. So leave your bed and get ready to ready to be sweat on Sunday morning!",
+      "date" : "25/8/2019", 
+	  "time" : "",
+	  "eventType" : "Run, Health",
+	  "location" : "1st Avenue Mall",
+	  "email" : "",
+	  "phone" : "",
+	  "key" : "-LGXOemjKu55OzbHnnwu4",
+	  "payment" : "free"
     },
     "-LGXOemkVw0k0IYfWigr5" : {
-      "title" : "Back to the Future",
-      "date" : "1985", 
-	  "key" : "-LGXOemkVw0k0IYfWigr5"
+      "eventName" : "Penang International Indian Shopping Festival",
+	  "eventDesc" : "Do come and join the most happening Indian Shopping Festival event in the town. The event is held for five days, starting from 29th August until 2nd September 2019. The most exciting thing is you can grab the latest fashion design and products from Mumbai, Jaipur, Gujerat, Andhra Pradesh, Calcutta and many more at a really good price! Let’s go!",
+      "date" : "29/8/2019 - 2/9/2019", 
+	  "time" : "12:00 pm - 10:00 pm ",
+	  "eventType" : "Sales",
+	  "location" : "Setia SPICE Arena",
+	  "email" : "",
+	  "phone" : "",
+	  "key" : "-LGXOemkVw0k0IYfWigr5",
+	  "payment" : "free"
     },
 	 "-LGXOembRsZeAmrrgIpE6" : {
-      "title" : "Interestelar",
-      "date" : "2014", 
-	  "key" : "-LGXOembRsZeAmrrgIpE6"
+       "eventName" : "KBJ Car Audio & Body Kit Competition",
+	  "eventDesc" : "An annual event organised by KBJ that showcases the creativity of car modification enthusiasts, as well as car modifiers specialising in audio and visual sensations.",
+      "date" : "31/8/2019", 
+	  "time" : "11:00 am - 7:00 pm",
+	  "eventType" : "Hobby",
+	  "location" : "Kompleks Bukit Jambul",
+	  "email" : "admin@kbj.com.my",
+	  "phone" : "04-645 6788",
+	  "key" : "-LGXOembRsZeAmrrgIpE6",
+	  "payment" : "free"
     },
     "-LGXOemho32cuDvUv8w47" : {
-      "title" : "Avengers: Infinity War",
-      "date" : "2018", 
-	  "key" : "-LGXOemho32cuDvUv8w47"
+      "eventName" : "Al-Jalal Fun Run & Ride 2019",
+	  "eventDesc" : "Welcome to the Al-Jalal Fun Run & Ride 2019 event page!",
+      "date" : "31/8/2019 - 1/9/2019", 
+	  "time" : "7:30:00 AM",
+	  "eventType" : "Run, Health",
+	  "location" : "Masjid Pajak Song",
+	  "email" : "helpdesk@howei.com",
+	  "phone" : "",
+	  "key" : "-LGXOemho32cuDvUv8w47",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwt8" : {
-      "title" : "Black Panther",
-      "date" : "2018", 
-	  "key" : "-LGXOemjKu55OzbHnnwt8"
+      "eventName" : "Mid-Autumn - Fly me to the moon Lantern creation and parade",
+	  "eventDesc" : "Let your creativity take you to the moon and beyond. Parade with pride showcasing your very own creation. The evening is yours!",
+      "date" : "7/9/2019", 
+	  "time" : "7.30 pm",
+	  "eventType" : "Festival, Competition",
+	  "location" : "Queensbay Mall",
+	  "email" : "talk2us@queensbaymall.my",
+	  "phone" : "04-646 8888",
+	  "key" : "-LGXOemjKu55OzbHnnwt8",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwu9" : {
-      "title" : "Independece Day",
-      "date" : "1996", 
-	  "key" : "-LGXOemjKu55OzbHnnwu9"
+     "eventName" : "Penang Esports Festival 2019",
+	  "eventDesc" : "A large scale esports festival organised for the first time in Penang with the mission to establish the state as a gaming and esports hub in Malaysia and beyond. The festival will bring you gaming showcases, top esports championships and many more gaming related activities!",
+      "date" : "07/09/2019 - 08/9/2019", 
+	  "time" : "",
+	  "eventType" : "Hobby, Gaming, Cosplay",
+	  "location" : "Setia SPICE Arena",
+	  "email" : "",
+	  "phone" : "",
+	  "key" : "-LGXOemjKu55OzbHnnwu9",
+	  "payment" : "free"
     },
     "-LGXOemkVw0k0IYfWigr0" : {
-      "title" : "Back to the Future",
-      "date" : "1985", 
-	  "key" : "-LGXOemkVw0k0IYfWigr0"
+      "eventName" : "Penang Asian Food & Culture Festival",
+	  "eventDesc" : "Penang Asian Food & Culture Festival celebrates the quintessence and diversity of cuisines as well as cultural characteristics of Asian countries. Through this festival, we are bringing the communities together via mutual love of food and culture, and by building on the exciting growth and creativity taking place in the Asian culinary community. Thus, making Penang a cultural and culinary destination for Asian food lovers.",
+      "date" : "13/9/2019 - 15/9/2019", 
+	  "time" : "10:00 am - 10:00 pm",
+	  "eventType" : "Food, Sales",
+	  "location" : "Japan in Gurney Paragon, Thailand in 1st Avenue, China in Gurney Plaza, Indonesia in Sunway Carnival Mall and South Korea in Queensbay Mall.",
+	  "email" : "info@penangglobaltourism.com",
+	  "phone" : "",
+	  "key" : "-LGXOemkVw0k0IYfWigr0",
+	  "payment" : "free"
     },
 	 "-LGXOembRsZeAmrrgIpE11" : {
-      "title" : "Interestelar",
-      "date" : "2014", 
-	  "key" : "-LGXOembRsZeAmrrgIpE11"
+      "eventName" : "Kimia Heritage Run",
+	  "eventDesc" : "This fun run is organised in conjunction with the 110th anniversary of the Department of Chemistry Malaysia and it is to encourage people of all ages to be active through running in a fun way. This event also aims to promote Science, Technology, Engineering and Mathematics (STEM) education to the parents and young generation through science fairs and increase public awareness on “No Single Use Plastic” campaign.",
+      "date" : "15/9/2019", 
+	  "time" : "7:00 AM",
+	  "eventType" : "Run, Health",
+	  "location" : "Jalan Padang Kota Lama",
+	  "email" : "haznan@kimia.gov.my",
+	  "phone" : "012 958-2741",
+	  "key" : "-LGXOembRsZeAmrrgIpE11",
+	  "payment" : "free"
     },
     "-LGXOemho32cuDvUv8w412" : {
-      "title" : "Avengers: Infinity War",
-      "date" : "2018", 
-	  "key" : "-LGXOemho32cuDvUv8w412"
+       "eventName" : "Building Professional Relationships That Support Your Career",
+	  "eventDesc" : "Carrer and life goal setting together with networking",
+      "date" : "15/9/2019", 
+	  "time" : "9:30 am - 12:30 pm",
+	  "eventType" : "Business, Entrepreneurship, Talks",
+	  "location" : "T Space",
+	  "email" : "",
+	  "phone" : "",
+	  "key" : "-LGXOemho32cuDvUv8w412",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwt13" : {
-      "title" : "Black Panther",
-      "date" : "2018", 
-	  "key" : "-LGXOemjKu55OzbHnnwt13"
+      "eventName" : "DeTech Conference 2019",
+	  "eventDesc" : "deTECH is a two-day annual conference that covers everything technology. We aim to gather all technology enthusiasts to provide them with the latest technological trends and business opportunities available in the industry. This year, we are going to discuss artificial intelligence, data science, cybersecurity, smart city, immersive technologies, and smart retail. Join us and let's decipher tech together!",
+      "date" : "01/10/2019 - 02/10/2019", 
+	  "time" : "8:30 am - 5:30 pm",
+	  "eventType" : "Technology, Conference",
+	  "location" : "Penang Skills Development Centre (PSDC)",
+	  "email" : "hello@detechconf.com",
+	  "phone" : "04-225 0100",
+	  "key" : "-LGXOemjKu55OzbHnnwt13",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwu14" : {
-      "title" : "Independece Day",
-      "date" : "1996", 
-	  "key" : "-LGXOemjKu55OzbHnnwu14"
+     "eventName" : "Penang RendezVous",
+	  "eventDesc" : "The Penang RendezVous offers you a luxury lifestyle experience in a marine environment encompassing cars, art, fashion, entertainment and food with an interactive approach. Visitors can expect one-of-a-kind experiences – from yachts, classic cars and supercars to high-end properties, art, fine wines and gastronomy.",
+      "date" : "04/10/2019 - 06/10/2019", 
+	  "time" : "",
+	  "eventType" : "Hobby, Luxury",
+	  "location" : "Straits Quay Marina",
+	  "email" : "aileen@heart-media.com/",
+	  "phone" : "",
+	  "key" : "-LGXOemjKu55OzbHnnwu14",
+	  "payment" : "free"
     },
     "-LGXOemkVw0k0IYfWigr15" : {
-      "title" : "Back to the Future",
-      "date" : "1985", 
-	  "key" : "-LGXOemkVw0k0IYfWigr15"
+      "eventName" : "I Love Penang Run",
+	  "eventDesc" : "Come and join us to discover the fascinating streets along Dewan Dato Haji Ahmad Badawi, Bagan Luar and Butterworth! You will be happily surprised by the astonishing views on the other side of Penang! We await you to be a part of the largest fun run event in Malaysia.",
+      "date" : "6/10/2019", 
+	  "time" : "",
+	  "eventType" : "Run, Health",
+	  "location" : "Butterworth",
+	  "email" : "helpdesk@howei.com",
+	  "phone" : "",
+	  "key" : "-LGXOemkVw0k0IYfWigr15",
+	  "payment" : "free"
     },
 	 "-LGXOembRsZeAmrrgIpE16" : {
-      "title" : "Interestelar",
-      "date" : "2014", 
-	  "key" : "-LGXOembRsZeAmrrgIpE16"
+      "eventName" : "Penang Coffee + Art Weekend",
+	  "eventDesc" : "Where coffee lovers meet; where coffee amateurs grow. The Penang Coffee + Art Weekend brings together coffee lovers, and provides a platform for all things coffee. Coffee lovers can enjoy, indulge and experience the different flavours and possibilities of coffee, as well as witness a showcase of coffee art by various renown baristas.",
+      "date" : "12/10/2019 - 13/10/2019", 
+	  "time" : "10:00 am - 10:00 pm",
+	  "eventType" : "Hobby, Food",
+	  "location" : "Major Shopping Malls in Penang",
+	  "email" : "info.penangtourism@gmail.com",
+	  "phone" : "04-650 5133",
+	  "key" : "-LGXOembRsZeAmrrgIpE16",
+	  "payment" : "free"
     },
     "-LGXOemho32cuDvUv8w417" : {
-      "title" : "Avengers: Infinity War",
-      "date" : "2018", 
-	  "key" : "-LGXOemho32cuDvUv8w417"
+      "eventName" : "Halloween Party",
+	  "eventDesc" : "Dare yourselves to the freakiest Halloween at the tallest building in Penang! The Top Penang celebrates Halloween with decorations, parties, candies, costumes and trick-or-treating. A series of performances and activities will make your Halloween night a memorable one.",
+      "date" : "26/10/2019", 
+	  "time" : "5:00 pm - 12:30 am",
+	  "eventType" : "Festival, Cosplay",
+	  "location" : "The Top @ KOMTAR 1",
+	  "email" : "sales@thetop.com.my",
+	  "phone" : "04-262 3800",
+	  "key" : "-LGXOemho32cuDvUv8w417",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwt18" : {
-      "title" : "Black Panther",
-      "date" : "2018", 
-	  "key" : "-LGXOemjKu55OzbHnnwt18"
+      "eventName" : "The Top Penang Tower Run",
+	  "eventDesc" : "The Komtar Tower is known as Penang’s tallest skyscraper, offering a stunning view of George Town. The Top Penang Tower Run is held with the objective of fostering a healthy lifestyle regardless of the city’s hectic pace. Participants will be climbing in the most significant building that has a height of 249m from the ground.",
+      "date" : "17/11/2019", 
+	  "time" : "7:00 am - 10:00 am",
+	  "eventType" : "Run, Health",
+	  "location" : "The Top @ KOMTAR 1",
+	  "email" : "sales@thetop.com.my",
+	  "phone" : "04-262 3800",
+	  "key" : "-LGXOemjKu55OzbHnnwt18",
+	  "payment" : "free"
     },
     "-LGXOemjKu55OzbHnnwu19" : {
-      "title" : "Independece Day",
-      "date" : "1996", 
-	  "key" : "-LGXOemjKu55OzbHnnwu19"
+      "eventName" : "George Town Literary Festival",
+	  "eventDesc" : "The George Town Literary Festival is the largest international literary festival in Malaysia. GTLF focuses on world literature and believes in the power of free speech and expression and is committed to being one of the most urgent, vital and provocative literary festivals in the region.",
+      "date" : "21/11/2019 - 24/11/2019", 
+	  "time" : "",
+	  "eventType" : "Geek, Talks",
+	  "location" : "George Town",
+	  "email" : "info@georgetownlitfest.com",
+	  "phone" : "04-261 6161",
+	  "key" : "-LGXOemjKu55OzbHnnwu19",
+	  "payment" : "free"
     },
     "-LGXOemkVw0k0IYfWigr20" : {
-      "title" : "Back to the Future",
-      "date" : "1985", 
-	  "key" : "-LGXOemkVw0k0IYfWigr20"
+      "eventName" : "Penang Bridge International Marathon",
+	  "eventDesc" : "The Penang Bridge International Marathon is an international running event catered to all from young to old and leisure to serious runners. The event in now in its ninth year and will be held at the Penang Bridge. The Penang Bridge International Marathon is the biggest running event in Malaysia and has been listed in the Malaysia Book of Records for four consecutive years.",
+      "date" : "24/11/2019", 
+	  "time" : "",
+	  "eventType" : "Run, Health",
+	  "location" : "Penang Bridge, Penang",
+	  "email" : "info@penangmarathon.gov.my",
+	  "phone" : "016-411 0000",
+	  "key" : "-LGXOemkVw0k0IYfWigr20",
+	  "payment" : "free"
     }
+  },
+  "profile" : {
+    "sawweizhen0@hotmaildotcom" : {
+      "favourites" : "undefined",
+      "fname" : "Wei Zhen", 
+	  "lname" : "Saw",
+	  "rewardPoints": 0
+	}
   }
 }

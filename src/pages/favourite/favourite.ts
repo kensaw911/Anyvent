@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
 import { EventServiceProvider } from '../../providers/event-service/event-service';
 import { EventInfoPage } from '../event-info/event-info';
 import { take } from 'rxjs/operators';
@@ -36,7 +35,7 @@ export class FavouritePage {
     console.log('ionViewDidLoad FavouritePage');
   }
 
-  ionViewDidEnter() {
+  ionViewWillEnter() {
     this.generalProvider.showLoading('');
     let date = new Date();
     let hour = date.getHours();
@@ -60,6 +59,7 @@ export class FavouritePage {
     let event = this.eventService.events$;
     let eventKeys = new Array();
     let favourites = localStorage.getItem('fav');
+    console.log("hello", favourites);
     let favArr = favourites.split(',');
 
     event.forEach(element => {

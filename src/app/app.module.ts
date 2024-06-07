@@ -16,7 +16,6 @@ import { Network } from '@ionic-native/network';
 import { Facebook } from '@ionic-native/facebook';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
-import { ShrinkingSegmentHeaderComponent } from '../components/shrinking-segment-header/shrinking-segment-header';
 import { EventServiceProvider } from '../providers/event-service/event-service';
 import { FavouritePage } from '../pages/favourite/favourite';
 import { FreelancePage } from '../pages/freelance/freelance';
@@ -26,6 +25,10 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { UserinfoProvider } from '../providers/userinfo/userinfo';
+import { ComponentsModule } from '../components/components.module';
+import { ProfilePage } from '../pages/profile/profile';
+import { Brightness } from '@ionic-native/brightness';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 
 @NgModule({
@@ -38,13 +41,15 @@ import { UserinfoProvider } from '../providers/userinfo/userinfo';
     RegisterPage,
     TabsPage,
     EventInfoPage,
-    ShrinkingSegmentHeaderComponent
+    ProfilePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ComponentsModule,
+    NgxQRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +60,8 @@ import { UserinfoProvider } from '../providers/userinfo/userinfo';
     TabsPage,
     FavouritePage,
     FreelancePage,
-    EventInfoPage
+    EventInfoPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
@@ -71,7 +77,9 @@ import { UserinfoProvider } from '../providers/userinfo/userinfo';
     LaunchNavigator,
     EmailComposer,
     UserinfoProvider,
-    SocialSharing
+    SocialSharing,
+    Brightness,
+    NgxQRCodeModule
   ]
 })
 export class AppModule {}
